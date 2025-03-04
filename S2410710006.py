@@ -3,6 +3,7 @@
 # ================================
 
 # import modules
+import os
 import argparse
 import re
 import matplotlib.pyplot as plt
@@ -14,6 +15,8 @@ import scipy.constants as const
 # set up argument parser
 parser = argparse.ArgumentParser(description="Parse variables")
 
+os.chdir("C:/Users/jauss/OneDrive/Documents/FH_OOe_MEWI_Master/Semester_1/VCDD1_IL/Coding_Assignment/vcdd2024_Ausserhuber/")
+
 with open("Readme.txt", "r", encoding="utf-8") as textfile:
     for line in textfile:
         veh_mass_match = re.search(r"Vehicle mass=(\d+)kg", line)
@@ -21,6 +24,7 @@ with open("Readme.txt", "r", encoding="utf-8") as textfile:
         camber_match = re.search(r"Camber=(\d+)°", line)
         my_match = re.search(r"my=(\d+)", line)
 
+        print(str(veh_mass_match))
         # vehicle mass in kg
         if veh_mass_match:
             veh_mass = float(veh_mass_match.group(1))
