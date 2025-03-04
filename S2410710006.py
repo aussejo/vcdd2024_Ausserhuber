@@ -24,7 +24,6 @@ with open("Readme.txt", "r", encoding="utf-8") as textfile:
         camber_match = re.search(r"Camber=(\d+)°", line)
         my_match = re.search(r"my=(\d+)", line)
 
-        print(str(veh_mass_match))
         # vehicle mass in kg
         if veh_mass_match:
             veh_mass = float(veh_mass_match.group(1))
