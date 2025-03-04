@@ -3,6 +3,7 @@
 # ================================
 
 # import modules
+import os
 import argparse
 import re
 import matplotlib.pyplot as plt
@@ -13,6 +14,8 @@ import scipy.constants as const
 
 # set up argument parser
 parser = argparse.ArgumentParser(description="Parse variables")
+
+os.chdir("C:/Users/jauss/OneDrive/Documents/FH_OOe_MEWI_Master/Semester_1/VCDD1_IL/Coding_Assignment/vcdd2024_Ausserhuber/")
 
 with open("Readme.txt", "r", encoding="utf-8") as textfile:
     for line in textfile:
